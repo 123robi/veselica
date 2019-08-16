@@ -38,7 +38,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-    <?= $this->Html->css('veselica') ?>
+    <?= $this->Html->css(['veselica','main']) ?>
 
     <?= $this->Html->script(['js']) ?>
 
