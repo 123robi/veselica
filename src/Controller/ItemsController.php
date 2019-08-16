@@ -17,9 +17,11 @@ class ItemsController extends AppController
         if ($this->request->is('post')) {
             $item = $this->Items->patchEntity($item, $this->request->getData());
             if ($this->Items->save($item)) {
-                $this->Flash->success('Shranjeno!');
             }
         }
+        $this->layout = false;
+        $this->set('item', $item);
+        $this->render('/Element/template');
     }
 
     public function edit($id = null) {

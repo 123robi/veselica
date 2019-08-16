@@ -7,17 +7,13 @@ $(document).ready(function(){
             data: {
                 'ime' : $('#ime').val(),
                 'cena' : $('#cena').val(),
+            },
+            success: function (data) {
+                $("#tbody").append(data);
+                // debugger;
+                $("#dodajPonudbo").modal('toggle');
             }
         });
-
-        $.ajax({
-            type: "GET",
-            url: "https://www.rkosir.eu/veselica/",
-        }).done(function(response) {
-            console.log(response);
-            $('#punudbaTable').html(response);
-        });
-
     });
 
     //popravi ponudbo

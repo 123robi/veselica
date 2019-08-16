@@ -1,5 +1,4 @@
-<body id="punudbaTable">
-<div class="container">
+<div class="container" >
     <div class="table-wrapper">
         <div class="table-title">
             <div class="row">
@@ -11,7 +10,7 @@
                 </div>
             </div>
         </div>
-        <table class="table table-striped table-hover">
+        <table class="table table-striped table-hover" >
             <thead>
             <tr>
                 <th>Ime</th>
@@ -19,17 +18,10 @@
                 <th><i class="fa fa-cog" aria-hidden="true"></i></th>
             </tr>
             </thead>
-            <tbody >
+            <tbody id="tbody">
             <?php if(!empty($items)): ?>
                 <?php foreach($items as $item):?>
-                <tr>
-                    <td width="70%"><?php echo $item->ime ?></td>
-                    <td width="10%"><?php echo $item->cena ?> €</td>
-                    <td width="10%">
-                        <a href="#popraviPonudbo" class="edit" data-toggle="modal" data-id="<?php echo $item->id ?>"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                        <a href="#izbrisiPonudbo" class="delete" data-toggle="modal" data-id="<?php echo $item->id ?>"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                    </td>
-                </tr>
+                    <?= $this->element('template', ['item' => $item]); ?>
                 <?php endforeach; ?>
             <?php else: ?>
             <td colspan="3">No record found</td>
@@ -114,4 +106,3 @@
         </div>
     </div>
 </div>
-</body>
