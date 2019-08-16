@@ -9,6 +9,7 @@ use Cake\ORM\Entity;
  * @property int $id
  * @property int $item_id
  * @property int $narocilo_id
+ * @property int $kolicina
  *
  * @property \App\Model\Entity\Item $item
  * @property \App\Model\Entity\Narocilo $narocilo
@@ -27,6 +28,7 @@ class Narocilaitem extends Entity
     protected $_accessible = [
         'item_id' => true,
         'narocilo_id' => true,
+        'kolicina' => true,
         'item' => true,
         'narocilo' => true
     ];

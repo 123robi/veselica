@@ -59,6 +59,11 @@ class NarocilaitemsTable extends Table
             ->integer('id')
             ->allowEmptyString('id', 'create');
 
+        $validator
+            ->integer('kolicina')
+            ->requirePresence('kolicina', 'create')
+            ->notEmptyString('kolicina');
+
         return $validator;
     }
 
