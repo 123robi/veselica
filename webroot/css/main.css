@@ -1,9 +1,11 @@
-.grid{
-    height: 60px;
-    border: 1px solid black;
-    margin: 3px;
-    word-break: break-word;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.card-header {text-align: center; max-height: 80px}
+.card-body {text-align: center; padding-bottom: 8px}
+.big-font {font-size: 20px}
+.minus {background-color: #891114;
+    color: white;
+    border-radius: 0.25em;
+}
+.plus {background-color: #008012;
+    color: white;
+    border-radius: 0.25em;
 }
