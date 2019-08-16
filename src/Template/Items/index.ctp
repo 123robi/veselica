@@ -27,7 +27,7 @@
                     <td width="10%"><?php echo $item->cena ?> €</td>
                     <td width="10%">
                         <a href="#popraviPonudbo" class="edit" data-toggle="modal" data-id="<?php echo $item->id ?>"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                        <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                        <a href="#izbrisiPonudbo" class="delete" data-toggle="modal" data-id="<?php echo $item->id ?>"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                     </td>
                 </tr>
                 <?php endforeach; ?>
@@ -59,7 +59,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                    <input type="button" class="btn btn-default" data-dismiss="modal" value="Nazaj">
                     <input type="submit"  id="addPonudba" class="btn btn-success" value="Add">
                 </div>
             </form>
@@ -90,12 +90,28 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                    <input type="button" class="btn btn-default" data-dismiss="modal" value="Nazaj">
                     <input id="editPonudba" type="submit" class="btn btn-info" value="Save">
                 </div>
             </form>
         </div>
     </div>
 </div>
-
+<!-- Delete Modal HTML -->
+<div id="izbrisiPonudbo" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form>
+                <div class="modal-header">
+                    <h4 class="modal-title">Izbrisi ponudbo</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-footer">
+                    <input type="button" class="btn btn-default" data-dismiss="modal" value="Nazaj">
+                    <input id="deletePonudba" type="submit" class="btn btn-info" value="Izbrisi">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 </body>

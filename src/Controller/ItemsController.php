@@ -49,10 +49,6 @@ class ItemsController extends AppController
         }
     }
 
-    public function getItems() {
-        $this->set('items', $this->Items->find());
-    }
-
     public function delete($id = null) {
         if (!$this->Items->exists($id)) {
             throw new NotFoundException(_('Invalid user'));

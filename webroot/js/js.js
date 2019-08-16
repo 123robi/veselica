@@ -54,4 +54,24 @@ $(document).ready(function(){
         });
 
     });
+
+    //izbrisi ponudbo
+    $(".delete").click(function () {
+        var my_id_value = $(this).data('id');
+        console.log(my_id_value);
+        $("#deletePonudba").click(function () {
+            $.ajax({
+                type: "POST",
+                url: "https://www.rkosir.eu/veselica/delete/" + my_id_value,
+            })
+
+            $.ajax({
+                type: "GET",
+                url: "https://www.rkosir.eu/veselica/",
+            }).done(function(response) {
+                $('#punudbaTable').html(response);
+            });
+        });
+
+    });
 });
