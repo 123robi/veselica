@@ -3,4 +3,7 @@
     border: 1px solid black;
     margin: 3px;
     word-break: break-word;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
