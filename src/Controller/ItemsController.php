@@ -11,6 +11,7 @@ class ItemsController extends AppController
     public function index() {
         $this->set('items', $this->Items->find());
     }
+
     public function add() {
         $item = $this->Items->newEntity();
         if ($this->request->is('post')) {
@@ -49,11 +50,7 @@ class ItemsController extends AppController
     }
 
     public function getItems() {
-        if (!$this->Items->exists($id)) {
-            throw new NotFoundException(_('Invalid user'));
-        } else {
-            return $this->response->withType("json")->withStringBody($this->Items->get($id));
-        }
+        $this->set('items', $this->Items->find());
     }
 
     public function delete($id = null) {

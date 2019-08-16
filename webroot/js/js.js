@@ -14,6 +14,7 @@ $(document).ready(function(){
             type: "GET",
             url: "https://www.rkosir.eu/veselica/",
         }).done(function(response) {
+            console.log(response);
             $('#punudbaTable').html(response);
         });
 

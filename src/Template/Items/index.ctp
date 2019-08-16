@@ -1,4 +1,4 @@
-<body>
+<body id="punudbaTable">
 <div class="container">
     <div class="table-wrapper">
         <div class="table-title">
@@ -11,7 +11,7 @@
                 </div>
             </div>
         </div>
-        <table class="table table-striped table-hover" id="punudbaTable">
+        <table class="table table-striped table-hover">
             <thead>
             <tr>
                 <th>Ime</th>
@@ -19,7 +19,7 @@
                 <th><i class="fa fa-cog" aria-hidden="true"></i></th>
             </tr>
             </thead>
-            <tbody>
+            <tbody >
             <?php if(!empty($items)): ?>
                 <?php foreach($items as $item):?>
                 <tr>
