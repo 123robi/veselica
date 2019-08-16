@@ -24,8 +24,6 @@ $(document).ready(function(){
             type: "GET",
             url: "https://www.rkosir.eu/veselica/get/" + my_id_value,
             success: function(data) {
-                console.log(data);
-                console.log(data.ime);
                 $('#editIme').val(data.ime);
                 $('#editCena').val(data.cena);
             },
@@ -41,32 +39,24 @@ $(document).ready(function(){
                 'cena' : $('#editCena').val(),
             }
         });
+        console.log($('#editID').val());
+        $("#" + $('#editID').val() + " .ime").html($('#editIme').val());
+        $("#" + $('#editID').val() + " .cena").html($('#editCena').val() + "€");
+        $("#popraviPonudbo").modal('toggle');
 
-        $.ajax({
-            type: "GET",
-            url: "https://www.rkosir.eu/veselica/",
-        }).done(function(response) {
-            $('#punudbaTable').html(response);
-        });
 
     });
 
     //izbrisi ponudbo
     $(".delete").click(function () {
         var my_id_value = $(this).data('id');
-        console.log(my_id_value);
         $("#deletePonudba").click(function () {
             $.ajax({
                 type: "POST",
                 url: "https://www.rkosir.eu/veselica/delete/" + my_id_value,
             })
-
-            $.ajax({
-                type: "GET",
-                url: "https://www.rkosir.eu/veselica/",
-            }).done(function(response) {
-                $('#punudbaTable').html(response);
-            });
+            $("#" + my_id_value).remove();
+            $("#izbrisiPonudbo").modal('toggle');
         });
 
     });

@@ -38,7 +38,6 @@ class ItemsController extends AppController
             $item->cena = $cena;
 
             $this->Items->save($item);
-            $this->Flash->success('Shranjeno!');
             return $this->response->withType("json")->withStringBody("Shranjeno");
         }
     }
