@@ -52,7 +52,7 @@
                 </div>
                 <div class="modal-footer">
                     <input type="button" class="btn btn-default" data-dismiss="modal" value="Nazaj">
-                    <input type="submit"  id="addPonudba" class="btn btn-success" value="Add">
+                    <input type="button"  id="addPonudba" class="btn btn-success" value="Add">
                 </div>
             </form>
         </div>
@@ -83,7 +83,7 @@
                 </div>
                 <div class="modal-footer">
                     <input type="button" class="btn btn-default" data-dismiss="modal" value="Nazaj">
-                    <input id="editPonudba" type="submit" class="btn btn-info" value="Save">
+                    <input id="editPonudba" type="button" class="btn btn-info" value="Save">
                 </div>
             </form>
         </div>
@@ -100,7 +100,7 @@
                 </div>
                 <div class="modal-footer">
                     <input type="button" class="btn btn-default" data-dismiss="modal" value="Nazaj">
-                    <input id="deletePonudba" type="submit" class="btn btn-info" value="Izbrisi">
+                    <input id="deletePonudba" type="button" class="btn btn-info" value="Izbrisi">
                 </div>
             </form>
         </div>

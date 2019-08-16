@@ -10,14 +10,13 @@ $(document).ready(function(){
             },
             success: function (data) {
                 $("#tbody").append(data);
-                // debugger;
                 $("#dodajPonudbo").modal('toggle');
             }
         });
     });
 
     //popravi ponudbo
-    $(".edit").click(function () {
+    $("#tbody").on('click', '.edit', (function () {
         var my_id_value = $(this).data('id');
         $('#editID').val(my_id_value);
         $.ajax({
@@ -28,7 +27,7 @@ $(document).ready(function(){
                 $('#editCena').val(data.cena);
             },
         })
-    });
+    }));
 
     $("#editPonudba").click(function() {
         $.ajax({
