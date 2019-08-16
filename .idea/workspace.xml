@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f317651f-a108-4493-8c78-d3a60f42d136" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Controller/ItemsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ItemsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Template/Items/index.ctp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Template/Items/index.ctp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webroot/js/js.js" beforeDir="false" afterPath="$PROJECT_DIR$/webroot/js/js.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,11 +35,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Template/Items/index.ctp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
-              <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+              <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -92,13 +99,7 @@
         <option value="$PROJECT_DIR$/src/Controller/ItemsController.php" />
         <option value="$PROJECT_DIR$/webroot/js/js.js" />
         <option value="$PROJECT_DIR$/src/Template/Items/index.ctp" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -120,65 +121,6 @@
             <path>
               <item name="veselica" type="b2602c69:ProjectViewProjectNode" />
               <item name="veselica" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="veselica" type="b2602c69:ProjectViewProjectNode" />
-              <item name="veselica" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="veselica" type="b2602c69:ProjectViewProjectNode" />
-              <item name="veselica" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="veselica" type="b2602c69:ProjectViewProjectNode" />
-              <item name="veselica" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="veselica" type="b2602c69:ProjectViewProjectNode" />
-              <item name="veselica" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Shell" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="veselica" type="b2602c69:ProjectViewProjectNode" />
-              <item name="veselica" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Template" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="veselica" type="b2602c69:ProjectViewProjectNode" />
-              <item name="veselica" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Template" type="462c0819:PsiDirectoryNode" />
-              <item name="Items" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="veselica" type="b2602c69:ProjectViewProjectNode" />
-              <item name="veselica" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Template" type="462c0819:PsiDirectoryNode" />
-              <item name="Layout" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="veselica" type="b2602c69:ProjectViewProjectNode" />
-              <item name="veselica" type="462c0819:PsiDirectoryNode" />
-              <item name="webroot" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="veselica" type="b2602c69:ProjectViewProjectNode" />
-              <item name="veselica" type="462c0819:PsiDirectoryNode" />
-              <item name="webroot" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="veselica" type="b2602c69:ProjectViewProjectNode" />
-              <item name="veselica" type="462c0819:PsiDirectoryNode" />
-              <item name="webroot" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -228,12 +170,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1565944877715</updated>
-      <workItem from="1565944878948" duration="11622000" />
+      <workItem from="1565944878948" duration="11706000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11622000" />
+    <option name="totallyTimeSpent" value="11706000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -340,7 +282,14 @@
     <entry file="file://$PROJECT_DIR$/src/Template/Items/index.ctp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
