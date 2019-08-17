@@ -22,8 +22,9 @@ class OrdersController extends AppController
             $session = $this->getRequest()->getSession();
             $narocila = $this->Narocila->newEntity();
             $narocila->user_id = $session->read('User')->id;
+            $narocila->placano = $this->request->getData()['paid'];
             $this->Narocila->save($narocila);
-            foreach ($this->request->getData() as $id => $q) {
+            foreach ($this->request->getData()['order'] as $id => $q) {
                 $narocilaitem = $this->Narocilaitems->newEntity();
                 $narocilaitem->item_id = $id;
                 $narocilaitem->narocilo_id = $narocila->id;

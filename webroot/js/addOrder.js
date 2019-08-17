@@ -41,7 +41,7 @@ $(document).ready(function(){
             dataType: 'json',
             data: {
                 'order': order,
-                'paid': false
+                'paid': 0
             },
 
             beforeSend: function(xhr) {
@@ -62,7 +62,7 @@ $(document).ready(function(){
             dataType: 'json',
             data: {
                 'order': order,
-                'paid': true,
+                'paid': 1,
             },
 
             beforeSend: function(xhr) {
