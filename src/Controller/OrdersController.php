@@ -34,7 +34,7 @@ class OrdersController extends AppController
             return $this->response->withType("json")->withStringBody("Shranjeno");
         }
 
-        $items = $this->Items->find();
+        $items = $this->Items->find()->order('id');
         $this->set('items', $items);
     }
 
