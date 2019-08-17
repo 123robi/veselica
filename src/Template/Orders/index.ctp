@@ -15,6 +15,7 @@
             <tr>
                 <th>Narocilo</th>
                 <th>Placano</th>
+                <th>Cena</th>
             </tr>
             </thead>
             <tbody id="tbody">
@@ -26,15 +27,25 @@
                 if (!isset($array[$order->narocilo_id]['podatki'])){
                      $array[$order->narocilo_id]['podatki'] = [];
                  }
-                if (!isset($array[$order->narocilo_id]['placano'])){
-                $array[$order->narocilo_id]['placano'] = [];
+                if (!isset($array[$order->narocilo_id]['ordernum'])){
+                $array[$order->narocilo_id]['ordernum'] = [];
                 }
+                if (!isset($array[$order->narocilo_id]['placano'])){
+                    $array[$order->narocilo_id]['placano'] = [];
+                }
+            if (!isset($array[$order->narocilo_id]['cena'])){
+            $array[$order->narocilo_id]['cena'] = [];
+            }
                  array_push($array[$order->narocilo_id]['podatki'], $order->_matchingData['Items']->ime . " x " . $order->kolicina . "  ");
                 $array[$order->narocilo_id]['placano'] = $order->_matchingData['Narocila']->placano;
+            $array[$order->narocilo_id]['ordernum'] = $order->narocilo_id;
+            array_push( $array[$order->narocilo_id]['cena'],$order->_matchingData['Items']->cena);
             endforeach; ?>
             <?php foreach($array as $order):?>
+
                 <td width="70%" class="ime"><?php echo implode(" | ",$order['podatki']); ?></td>
                 <td width="10%" class="placano"><?php if ($order['placano'] == 0) { echo "Ne"; } else{ echo "Ja";} ?></td>
+                <td width="10%" class="ime"><?php echo array_sum($order['cena']);?> €</td>
             <?php endforeach; ?>
             <?php else: ?>
             <td colspan="3">No record found</td>

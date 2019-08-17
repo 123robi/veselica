@@ -45,10 +45,8 @@ class OrdersController extends AppController
                 ->where(['Narocila.user_id' => $session->read('User')->id]);
         });
         $narocila->innerJoinWith('Items');
-        $narocila->select( ['narocilo_id', 'Items.ime', 'Narocilaitems.kolicina', 'Narocila.placano']);
-
+        $narocila->select( ['narocilo_id', 'Items.ime', 'Narocilaitems.kolicina', 'Narocila.placano', 'Items.cena']);
 
         $this->set('orders',$narocila);
-//        return $this->response->withType("json")->withStringBody(json_encode($narocila));
     }
 }
