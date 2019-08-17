@@ -43,10 +43,10 @@
                  array_push($array[$order->narocilo_id]['podatki'], $order->_matchingData['Items']->ime . " x " . $order->kolicina . "  ");
                 $array[$order->narocilo_id]['placano'] = $order->_matchingData['Narocila']->placano;
             $array[$order->narocilo_id]['ordernum'] = $order->narocilo_id;
-            array_push( $array[$order->narocilo_id]['cena'],$order->_matchingData['Items']->cena);
+            array_push( $array[$order->narocilo_id]['cena'],$order->_matchingData['Items']->cena* $order->kolicina);
             endforeach; ?>
             <?php foreach($array as $order):?>
-                <tr>
+                <tr class="<?php echo $order['ordernum']?>">
                     <td width="90%" class="ime"><?php echo implode(" / ",$order['podatki']); ?></td>
                     <td width="10%" class="d-none placano"><?php if ($order['placano'] == 0) { echo "Ne"; } else{ echo "Ja";} ?></td>
                     <td width="10%" class="ime"><?php echo array_sum($order['cena']);?> €</td>

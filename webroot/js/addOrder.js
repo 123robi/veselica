@@ -48,6 +48,7 @@ $(document).ready(function(){
                 xhr.setRequestHeader('X-CSRF-Token', $('[name="_csrfToken"]').val());
             }
         });
+        window.location.href  = "https://www.rkosir.eu/veselica/order/index";
     });
 
     $('#pay').on('click', function (event) {
@@ -89,8 +90,9 @@ $(document).ready(function(){
 
                 beforeSend: function(xhr) {
                     xhr.setRequestHeader('X-CSRF-Token', $('[name="_csrfToken"]').val());
-                }
+                },
             });
+            $('.' + id).css('background-color', '#caffc7');
         });
     })
 });
