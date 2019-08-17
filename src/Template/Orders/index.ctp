@@ -2,11 +2,14 @@
     <div class="table-wrapper">
         <div class="table-title">
             <div class="row">
-                <div class="col-sm-6">
+                <div class="col-4">
                     <h2><b>Narocila</b></h2>
                 </div>
-                <div class="col-sm-6">
-                    <a href="#dodajPonudbo" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Dodaj novo ponudbo</span></a>
+                <div class="col-8">
+                    <a href="<?php echo $this->Url->build([
+                        'controller'=>'Orders',
+                        'action'=>'addOrder'
+                    ]) ?>" class="btn btn-success"><i class="material-icons">&#xE147;</i> <span>Dodaj narocilo</span></a>
                 </div>
             </div>
         </div>
@@ -43,11 +46,12 @@
             array_push( $array[$order->narocilo_id]['cena'],$order->_matchingData['Items']->cena);
             endforeach; ?>
             <?php foreach($array as $order):?>
-
-                <td width="90%" class="ime"><?php echo implode(" | ",$order['podatki']); ?></td>
-                <td width="10%" class="d-none placano"><?php if ($order['placano'] == 0) { echo "Ne"; } else{ echo "Ja";} ?></td>
-                <td width="10%" class="ime"><?php echo array_sum($order['cena']);?> €</td>
-                <td><a href="#placaj" data-toggle="modal" class="btn btn-success btn-sm">></a></td>
+                <tr>
+                    <td width="90%" class="ime"><?php echo implode(" | ",$order['podatki']); ?></td>
+                    <td width="10%" class="d-none placano"><?php if ($order['placano'] == 0) { echo "Ne"; } else{ echo "Ja";} ?></td>
+                    <td width="10%" class="ime"><?php echo array_sum($order['cena']);?> €</td>
+                    <td><a id="open-pay-modal" href="#placaj" data-price="<?php echo array_sum($order['cena']);?>" data-id="<?php echo $order['ordernum']?>" data-toggle="modal" class="btn btn-success btn-sm">></a></td>
+                </tr>
             <?php endforeach; ?>
             <?php else: ?>
             <td colspan="3">No record found</td>
@@ -78,7 +82,7 @@
                         </div>
                         <input id="value" type="number" class="form-control" placeholder="Znesek" aria-label="Value" aria-describedby="basic-addon1">
                         <div class="input-group-append">
-                            <button id="pay" class="btn btn-outline-info" type="button">Plačaj</button>
+                            <button id="payOrder" class="btn btn-outline-info" type="button">Plačaj</button>
                         </div>
                     </div>
                 </div>

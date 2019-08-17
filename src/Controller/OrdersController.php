@@ -17,6 +17,19 @@ class OrdersController extends AppController
         $this->loadModel('Narocilaitems');
     }
 
+    public function payOrder() {
+        if ($this->request->is('AJAX')) {
+
+
+            $data = $this->request->getData();
+            $narocilo = $this->Narocila->get($data['order']);
+            $narocilo->placano = 1;
+            $this->Narocila->save($narocilo);
+
+            return $this->response->withType("json")->withStringBody("Shranjeno");
+        }
+    }
+
     public function addOrder() {
         if ($this->request->is('AJAX')) {
             $session = $this->getRequest()->getSession();

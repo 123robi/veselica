@@ -70,4 +70,27 @@ $(document).ready(function(){
             }
         });
     });
+    $('#open-pay-modal').on('click', function() {
+        var id = $(this).data('id');
+        var totalPrice = $(this).data('price');
+        $('.total').text($(this).data('price'));
+        $('#payOrder').on('click', function (event) {
+            event.stopPropagation();
+            let money = parseFloat($('#value').val()) || 0;
+            let returnMoney  = money - totalPrice;
+            $('.return').text(returnMoney);
+            $.ajax({
+                type:'POST',
+                url:'https://www.rkosir.eu/veselica/orders/payOrder',
+                dataType: 'json',
+                data: {
+                    'order': id
+                },
+
+                beforeSend: function(xhr) {
+                    xhr.setRequestHeader('X-CSRF-Token', $('[name="_csrfToken"]').val());
+                }
+            });
+        });
+    })
 });
