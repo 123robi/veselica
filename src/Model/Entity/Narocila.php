@@ -8,6 +8,7 @@ use Cake\ORM\Entity;
  *
  * @property int $id
  * @property int $user_id
+ * @property int $placano
  *
  * @property \App\Model\Entity\User $user
  */
@@ -24,6 +25,7 @@ class Narocila extends Entity
      */
     protected $_accessible = [
         'user_id' => true,
+        'placano' => true,
         'user' => true
     ];
 }

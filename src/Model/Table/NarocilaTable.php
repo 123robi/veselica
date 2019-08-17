@@ -54,6 +54,9 @@ class NarocilaTable extends Table
             ->integer('id')
             ->allowEmptyString('id', 'create');
 
+        $validator
+            ->notEmptyString('placano');
+
         return $validator;
     }
 
