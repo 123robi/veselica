@@ -1,4 +1,4 @@
-<form>
+<?= $this->Form->create() ?>
         <div class="row mt-3">
                 <?php foreach($items as $item):?>
                 <div class="col-4">
@@ -11,5 +11,5 @@
                 <?php endforeach; ?>
                 <input type="button"  id="addOrder" class="btn btn-success" value="Add">
         </div>
-</form>
+<?= $this->Form->end() ?>
 

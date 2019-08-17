@@ -31,6 +31,10 @@ $(document).ready(function(){
             url:'https://www.rkosir.eu/veselica/orders/addOrder',
             dataType: 'json',
             data: order,
+
+            beforeSend: function(xhr) {
+                xhr.setRequestHeader('X-CSRF-Token', $('[name="_csrfToken"]').val());
+            }
         });
     });
 });
