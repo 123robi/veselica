@@ -38,7 +38,17 @@ class OrdersController extends AppController
     }
 
     public function index() {
-        $session = $this->getRequest()->getSession();
-        $this->set('orders', $this->Narocila->find()->where(['user_id' => $session->read('User')->id]));
+        $narocila = $this->Narocilaitems->find();
+        $narocila->innerJoinWith('Narocila', function ($q) {
+            $session = $this->getRequest()->getSession();
+            return $q
+                ->where(['Narocila.user_id' => $session->read('User')->id]);
+        });
+        $narocila->innerJoinWith('Items');
+        $narocila->select( ['narocilo_id', 'Items.ime', 'Narocilaitems.kolicina', 'Narocila.placano']);
+
+
+        $this->set('orders',$narocila);
+//        return $this->response->withType("json")->withStringBody(json_encode($narocila));
     }
 }

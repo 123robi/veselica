@@ -13,22 +13,28 @@
         <table class="table table-striped table-hover" >
             <thead>
             <tr>
-                <th>User</th>
+                <th>Narocilo</th>
                 <th>Placano</th>
-                <th><i class="fa fa-cog" aria-hidden="true"></i></th>
             </tr>
             </thead>
             <tbody id="tbody">
-            <?php if(!empty($orders)): ?>
-            <?php foreach($orders as $order):?>
-                <tr id="<?php echo $order->id ?>">
-                    <td width="70%" class="user"> </td>
-                    <td width="10%" class="placano"><?php if ($order->placano == 0) { echo "Ne"; } else{ echo "Ja";} ?></td>
-                    <td width="10%">
-                    <a href="#popraviPonudbo" class="edit" data-toggle="modal" data-id="<?php echo $order->id ?>"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                    <a href="#izbrisiPonudbo" class="delete" data-toggle="modal" data-id="<?php echo $order->id ?>"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                </td>
-                </tr>
+            <?php  $array = []; $narocilo_id = 0; if(!empty($orders)): ?>
+            <?php foreach($orders as $order):
+            if (!isset( $array[$order->narocilo_id])){
+                $array[$order->narocilo_id] =  [];
+            }
+                if (!isset($array[$order->narocilo_id]['podatki'])){
+                     $array[$order->narocilo_id]['podatki'] = [];
+                 }
+                if (!isset($array[$order->narocilo_id]['placano'])){
+                $array[$order->narocilo_id]['placano'] = [];
+                }
+                 array_push($array[$order->narocilo_id]['podatki'], $order->_matchingData['Items']->ime . " x " . $order->kolicina . "  ");
+                $array[$order->narocilo_id]['placano'] = $order->_matchingData['Narocila']->placano;
+            endforeach; ?>
+            <?php foreach($array as $order):?>
+                <td width="70%" class="ime"><?php echo implode(" | ",$order['podatki']); ?></td>
+                <td width="10%" class="placano"><?php if ($order['placano'] == 0) { echo "Ne"; } else{ echo "Ja";} ?></td>
             <?php endforeach; ?>
             <?php else: ?>
             <td colspan="3">No record found</td>
