@@ -41,7 +41,7 @@ class NarocilaitemsTable extends Table
             'foreignKey' => 'item_id',
             'joinType' => 'INNER'
         ]);
-        $this->belongsTo('Narocilos', [
+        $this->belongsTo('Narocila', [
             'foreignKey' => 'narocilo_id',
             'joinType' => 'INNER'
         ]);
@@ -77,7 +77,7 @@ class NarocilaitemsTable extends Table
     public function buildRules(RulesChecker $rules)
     {
         $rules->add($rules->existsIn(['item_id'], 'Items'));
-        $rules->add($rules->existsIn(['narocilo_id'], 'Narocilos'));
+        $rules->add($rules->existsIn(['narocilo_id'], 'Narocila'));
 
         return $rules;
     }
