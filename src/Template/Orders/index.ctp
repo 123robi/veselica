@@ -14,7 +14,7 @@
             <thead>
             <tr>
                 <th>Narocilo</th>
-                <th>Placano</th>
+                <th class="d-none">Placano</th>
                 <th>Cena</th>
             </tr>
             </thead>
@@ -43,8 +43,8 @@
             endforeach; ?>
             <?php foreach($array as $order):?>
 
-                <td width="70%" class="ime"><?php echo implode(" | ",$order['podatki']); ?></td>
-                <td width="10%" class="placano"><?php if ($order['placano'] == 0) { echo "Ne"; } else{ echo "Ja";} ?></td>
+                <td width="90%" class="ime"><?php echo implode(" | ",$order['podatki']); ?></td>
+                <td width="10%" class="d-none placano"><?php if ($order['placano'] == 0) { echo "Ne"; } else{ echo "Ja";} ?></td>
                 <td width="10%" class="ime"><?php echo array_sum($order['cena']);?> €</td>
             <?php endforeach; ?>
             <?php else: ?>
