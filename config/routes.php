@@ -62,7 +62,7 @@ Router::scope('/', function (RouteBuilder $routes) {
      * its action called 'display', and we pass a param to select the view file
      * to use (in this case, src/Template/Pages/home.ctp)...
      */
-    Router::connect('/', array('controller' => 'items', 'action' => 'index', 'home'));
+    Router::connect('/', array('controller' => 'users', 'action' => 'index', 'home'));
     Router::connect('/:action/', array('controller' => 'items'));
     Router::connect('/order/:action/*', array('controller' => 'orders'));
     Router::connect('/user/:action/*', array('controller' => 'users'));

@@ -18,6 +18,7 @@ class UsersController extends AppController
                 $user = $existingUser;
             }
             $session->write('User', $user);
+            return $this->redirect(['controller' => 'Orders' , 'action' => 'addOrder']);
         }
         $this->set('user', $user);
     }
