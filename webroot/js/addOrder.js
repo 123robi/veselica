@@ -71,10 +71,11 @@ $(document).ready(function(){
             }
         });
     });
-    $('#open-pay-modal').on('click', function() {
+    $('.open-pay-modal').on('click', function() {
         var id = $(this).data('id');
         var totalPrice = $(this).data('price');
         $('.total').text($(this).data('price'));
+
         $('#payOrder').on('click', function (event) {
             event.stopPropagation();
             let money = parseFloat($('#value').val()) || 0;

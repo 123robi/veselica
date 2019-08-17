@@ -50,7 +50,7 @@
                     <td width="90%" class="ime"><?php echo implode(" / ",$order['podatki']); ?></td>
                     <td width="10%" class="d-none placano"><?php if ($order['placano'] == 0) { echo "Ne"; } else{ echo "Ja";} ?></td>
                     <td width="10%" class="ime"><?php echo array_sum($order['cena']);?> €</td>
-                    <td><a id="open-pay-modal" href="#placaj" data-price="<?php echo array_sum($order['cena']);?>" data-id="<?php echo $order['ordernum']?>" data-toggle="modal" class="btn btn-success btn-sm">></a></td>
+                    <td><a href="#placaj" data-price="<?php echo array_sum($order['cena']);?>" data-id="<?php echo $order['ordernum']?>" data-toggle="modal" class="open-pay-modal btn btn-success btn-sm">></a></td>
                 </tr>
             <?php endforeach; ?>
             <?php else: ?>
