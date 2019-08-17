@@ -1,11 +1,28 @@
-.card-header {text-align: center; max-height: 80px}
-.card-body {text-align: center; padding-bottom: 8px}
+.card-header {text-align: center; height: 80px}
+.card-body {text-align: center;padding-top: 0px; padding-bottom: 0px; padding-left: 15px; padding-right: 15px}
 .big-font {font-size: 20px}
-.minus {background-color: #891114;
-    color: white;
-    border-radius: 0.25em;
+.minus {
+    color: #ff4146;
+    font-size: 25px;
+    position: absolute;
+    right: -5px;
+    top: -15px;
+}
+.number {
+    font-size: 25px;
+    position: absolute;
+    left: -15px;
+    top: -15px;
 }
 .plus {background-color: #008012;
     color: white;
     border-radius: 0.25em;
+    height: 60px;
+}
+.num {
+    color: white;
+    position: absolute;
+    left: 16px;
+    top: 10px;
+    font-size: 18px;
 }
