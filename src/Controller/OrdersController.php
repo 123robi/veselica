@@ -59,7 +59,7 @@ class OrdersController extends AppController
                 ->where(['Narocila.user_id' => $session->read('User')->id]);
         });
         $narocila->innerJoinWith('Items');
-        $narocila->select( ['narocilo_id', 'Items.ime', 'Narocilaitems.kolicina', 'Narocila.placano', 'Items.cena']);
+        $narocila->select( ['narocilo_id', 'Items.ime', 'Narocilaitems.kolicina', 'Narocila.placano', 'Items.cena'])->order('Narocila.placano');
 
         $this->set('orders',$narocila);
     }
