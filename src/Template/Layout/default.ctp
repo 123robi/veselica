@@ -40,7 +40,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 
     <?= $this->Html->css(['veselica','main']) ?>
 
-    <?= $this->Html->script(['js']) ?>
+    <?= $this->Html->script(['js', 'users']) ?>
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
