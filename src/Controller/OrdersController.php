@@ -36,4 +36,9 @@ class OrdersController extends AppController
         $items = $this->Items->find();
         $this->set('items', $items);
     }
+
+    public function index() {
+        $session = $this->getRequest()->getSession();
+        $this->set('orders', $this->Narocila->find()->where(['user_id' => $session->read('User')->id]));
+    }
 }
