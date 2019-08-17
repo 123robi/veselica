@@ -24,4 +24,13 @@ $(document).ready(function(){
         }
         item.find('.background-number').text(order[itemId]);
     });
+
+    $("#addOrder").click(function() {
+        $.ajax({
+            type:'POST',
+            url:'https://www.rkosir.eu/veselica/orders/addOrder',
+            dataType: 'json',
+            data: order,
+        });
+    });
 });
